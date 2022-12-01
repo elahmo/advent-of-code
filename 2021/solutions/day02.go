@@ -1,27 +1,10 @@
-package main
+package day02
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 	"regexp"
 	"strconv"
 )
-
-func fileToLines(filePath string) (lines []string, err error) {
-	f, err := os.Open(filePath)
-	if err != nil {
-		return
-	}
-	defer f.Close()
-
-	scanner := bufio.NewScanner(f)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	err = scanner.Err()
-	return
-}
 
 type Instruction struct {
 	name  string
