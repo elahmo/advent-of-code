@@ -1,4 +1,4 @@
-package day01
+package solutions
 
 import (
 	"aoc22/helpers"
@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func Part1() int {
+func day01One() int {
 	lines, _ := helpers.FileToLines("day01.txt")
 	maxCalories := 0
 	currentCalories := 0
@@ -27,7 +27,7 @@ func Part1() int {
 	return maxCalories
 }
 
-func Part2() int {
+func day01Two() int {
 	lines, _ := helpers.FileToLines("day01.txt")
 	var calories []int
 	currentCalories := 0
@@ -46,6 +46,6 @@ func Part2() int {
 	return calories[len(calories)-1] + calories[len(calories)-2] + calories[len(calories)-3]
 }
 
-func Solve() {
-	fmt.Printf("Day1, part 1: %d, part 2: %d", Part1(), Part2())
+func Day01() {
+	fmt.Printf("Day1, part 1: %d, part 2: %d", day01One(), day01Two())
 }

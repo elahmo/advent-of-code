@@ -1,9 +1,8 @@
 package main
 
-import (
-	"aoc22/solutions/day01"
-)
+import "aoc22/solutions"
 
 func main() {
-	day01.Solve()
+	solutions.Day01()
+	solutions.Day02()
 }
