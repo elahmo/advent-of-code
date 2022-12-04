@@ -9,10 +9,11 @@ import (
 func charToPoint(c string) int {
 	runes := []rune(c)
 	asciiValue := int(runes[0])
-	//uppercase
+	// uppercase
 	if asciiValue < 96 {
 		return asciiValue - 38
 	}
+	// lowercase
 	return asciiValue - 96
 
 }
