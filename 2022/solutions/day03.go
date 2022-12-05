@@ -4,6 +4,7 @@ import (
 	"aoc22/helpers"
 	"fmt"
 	"strings"
+	"time"
 )
 
 func charToPoint(c string) int {
@@ -54,5 +55,9 @@ func day03Two() int {
 }
 
 func Day03() {
-	fmt.Printf("Day03, part 1: %d, part 2: %d\n", day03One(), day03Two())
+	start := time.Now()
+	one := day03One()
+	two := day03Two()
+	elapsed := time.Since(start)
+	fmt.Printf("Day03, part 1: %d, part 2: %d (%s)\n", one, two, elapsed)
 }

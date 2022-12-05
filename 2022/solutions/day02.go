@@ -3,6 +3,7 @@ package solutions
 import (
 	"aoc22/helpers"
 	"fmt"
+	"time"
 )
 
 type Move struct {
@@ -126,5 +127,9 @@ func day02Two() int {
 }
 
 func Day02() {
-	fmt.Printf("Day02, part 1: %d, part 2: %d\n", day02One(), day02Two())
+	start := time.Now()
+	one := day02One()
+	two := day02Two()
+	elapsed := time.Since(start)
+	fmt.Printf("Day02, part 1: %d, part 2: %d (%s)\n", one, two, elapsed)
 }

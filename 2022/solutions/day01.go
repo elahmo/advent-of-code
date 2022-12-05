@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"sort"
 	"strconv"
+	"time"
 )
 
 func day01One() int {
@@ -47,5 +48,9 @@ func day01Two() int {
 }
 
 func Day01() {
-	fmt.Printf("Day01, part 1: %d, part 2: %d\n", day01One(), day01Two())
+	start := time.Now()
+	one := day01One()
+	two := day01Two()
+	elapsed := time.Since(start)
+	fmt.Printf("Day01, part 1: %d, part 2: %d (%s)\n", one, two, elapsed)
 }

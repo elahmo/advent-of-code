@@ -4,6 +4,7 @@ import (
 	"aoc22/helpers"
 	"fmt"
 	"regexp"
+	"time"
 )
 
 func day05One() string {
@@ -67,5 +68,9 @@ func day05Two() string {
 }
 
 func Day05() {
-	fmt.Printf("Day05, part 1: %s, part 2: %s\n", day05One(), day05Two())
+	start := time.Now()
+	one := day05One()
+	two := day05Two()
+	elapsed := time.Since(start)
+	fmt.Printf("Day05, part 1: %s, part 2: %s (%s)\n", one, two, elapsed)
 }
