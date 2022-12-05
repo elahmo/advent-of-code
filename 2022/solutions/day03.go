@@ -54,5 +54,5 @@ func day03Two() int {
 }
 
 func Day03() {
-	fmt.Printf("Day03, part 1: %d, part 2: %d", day03One(), day03Two())
+	fmt.Printf("Day03, part 1: %d, part 2: %d\n", day03One(), day03Two())
 }

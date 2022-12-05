@@ -88,3 +88,33 @@ func Unique[T comparable](s []T) []T {
 	}
 	return result
 }
+
+func StrToInt(s string) int {
+	res, err := strconv.Atoi(s)
+	if err != nil {
+		panic(err)
+	}
+	return res
+}
+
+func PrependElementsMultiple[T comparable](slice []T, toPrepend []T) []T {
+	newSlice := make([]T, 0)
+	newSlice = append(newSlice, toPrepend...)
+	newSlice = append(newSlice, slice...)
+	return newSlice
+}
+
+func PrependElements[T comparable](slice []T, toPrepend []T) []T {
+	newSlice := make([]T, 0)
+	for i := len(toPrepend); i > 0; i-- {
+		newSlice = append(newSlice, toPrepend[i-1])
+	}
+	newSlice = append(newSlice, slice...)
+	return newSlice
+}
+
+func RemoveElements[T comparable](slice []T, qty int) []T {
+	newSlice := make([]T, 0)
+	newSlice = append(newSlice, slice[qty:]...)
+	return newSlice
+}
