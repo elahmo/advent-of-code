@@ -77,6 +77,15 @@ func IntersectionStrings(a, b string) (c []string) {
 	return
 }
 
+func UniqueChars(s string) int {
+	m := make(map[rune]int)
+
+	for _, char := range s {
+		m[char]++
+	}
+	return len(m)
+}
+
 func Unique[T comparable](s []T) []T {
 	inResult := make(map[T]bool)
 	var result []T
