@@ -14,5 +14,6 @@ func main() {
 	solutions.Day04()
 	solutions.Day05()
 	solutions.Day06()
+	solutions.Day07()
 	fmt.Printf("Total runtime: %s\n", time.Since(start))
 }
