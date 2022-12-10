@@ -127,3 +127,10 @@ func RemoveElements[T comparable](slice []T, qty int) []T {
 	newSlice = append(newSlice, slice[qty:]...)
 	return newSlice
 }
+
+func Abs(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
