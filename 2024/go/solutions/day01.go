@@ -57,3 +57,7 @@ func Day01() {
 	elapsed := time.Since(start)
 	fmt.Printf("Day01, part 1: %d, part 2: %d (%s)\n", one, two, elapsed)
 }
+
+func init() {
+	RegisterDay("Day01", Day01)
+}
