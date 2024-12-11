@@ -38,7 +38,6 @@ func day01Two() int {
 		_, err := fmt.Sscanf(line, "%d   %d", &num1, &num2)
 		if err != nil {
 			panic(err)
-
 		}
 		numsLeft = append(numsLeft, num1)
 		numsRight[num2]++
